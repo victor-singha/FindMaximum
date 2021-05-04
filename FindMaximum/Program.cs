@@ -15,7 +15,6 @@ namespace FindMaximum
             //float maxFloat = findMaximum(1.1f, 9.4f, 5.7f);
             //string maxString = findMaximum("Apple", "Peach", "Banana");
            
-
             string maxInt = findMaximum<int>(1, 2, 3);
             string maxFloat = findMaximum<float>(1.1f, 9.4f, 5.7f);
             string maxString = findMaximum<string>("Apple", "Peach", "Banana");
