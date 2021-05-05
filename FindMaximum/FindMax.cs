@@ -20,8 +20,8 @@ namespace FindMaximum
         public T findMaximum()
         {
             if (input1.CompareTo(input2) > 0 && input1.CompareTo(input3) > 0) return input1;
-            else if (input2.CompareTo(input1) > 0 && input2.CompareTo(input3) > 0) return input2;
-            else if (input3.CompareTo(input1) > 0 && input3.CompareTo(input2) > 0) return input3;
+            if (input2.CompareTo(input1) > 0 && input2.CompareTo(input3) > 0) return input2;
+            if (input3.CompareTo(input1) > 0 && input3.CompareTo(input2) > 0) return input3;
             else throw new Exception("Values are same");
         }
     }
