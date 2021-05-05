@@ -15,8 +15,8 @@ namespace FindMaximum
             //string maxString = findMaximum("Apple", "Peach", "Banana");
            
             //GENERIC METHODS
-            string maxInt = findMaximum<int>(1, 2, 3);
-            string maxFloat = findMaximum<float>(1.1f, 9.4f, 5.7f);
+            int maxInt = findMaximum<int>(1, 2, 3);
+            float maxFloat = findMaximum<float>(1.1f, 9.4f, 5.7f);
             string maxString = findMaximum<string>("Apple", "Peach", "Banana");
 
             Console.WriteLine(maxInt);
@@ -24,8 +24,8 @@ namespace FindMaximum
             Console.WriteLine(maxString);
 
             //GENERIC CLASS
-            string maxIntc = new FindMax<int>(3, 4, 9).findMaximum();
-            string maxDoublec = new FindMax<double>(3.6, 4.9, 5.7).findMaximum();
+            int maxIntc = new FindMax<int>(3, 4, 9).findMaximum();
+            double maxDoublec = new FindMax<double>(3.6, 4.9, 5.7).findMaximum();
             string maxStringc = new FindMax<string>("apple","peach","orange").findMaximum();
             
             Console.WriteLine(maxIntc);
@@ -55,11 +55,11 @@ namespace FindMaximum
         //    else if (input3.CompareTo(input1) > 0 && input3.CompareTo(input2) > 0) return input3;
         //    else throw new Exception("Values are same");
         //}
-        static string findMaximum<T>(T input1, T input2, T input3) where T : IComparable<T>
+        static T findMaximum<T>(T input1, T input2, T input3) where T : IComparable<T>
         {
-            if (input1.CompareTo(input2) > 0 && input1.CompareTo(input3) > 0) return input1.ToString();
-            else if (input2.CompareTo(input1) > 0 && input2.CompareTo(input3) > 0) return input2.ToString();
-            else if (input3.CompareTo(input1) > 0 && input3.CompareTo(input2) > 0) return input3.ToString();
+            if (input1.CompareTo(input2) > 0 && input1.CompareTo(input3) > 0) return input1;
+            else if (input2.CompareTo(input1) > 0 && input2.CompareTo(input3) > 0) return input2;
+            else if (input3.CompareTo(input1) > 0 && input3.CompareTo(input2) > 0) return input3;
             else throw new Exception("Values are same");
         }
     }
